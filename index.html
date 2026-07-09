@@ -1,45 +1,158 @@
 
+
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | หน้าหลัก</title>
 
-    <title>Portfolio welcom to my website</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
 
+        body{
+            background:#f5f5f5;
+            color:#333;
+        }
+
+        nav{
+            background:#1e3a8a;
+            padding:15px;
+            display:flex;
+            justify-content:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:gold;
+        }
+
+        .hero{
+            height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+        }
+
+        .hero img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:5px solid #1e3a8a;
+            margin-bottom:20px;
+        }
+
+        .hero h1{
+            font-size:42px;
+            color:#1e3a8a;
+        }
+
+        .hero h3{
+            margin-top:10px;
+            color:#666;
+        }
+
+        .hero p{
+            margin-top:20px;
+            width:70%;
+            line-height:1.8;
+        }
+
+        .btn{
+            margin-top:30px;
+            display:inline-block;
+            padding:12px 30px;
+            background:#1e3a8a;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#2563eb;
+            transform:scale(1.05);
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#1e3a8a;
+            color:white;
+        }
+
+        @media(max-width:768px){
+
+            nav{
+                flex-wrap:wrap;
+            }
+
+            nav a{
+                margin:10px;
+            }
+
+            .hero h1{
+                font-size:30px;
+            }
+
+            .hero p{
+                width:90%;
+            }
+
+        }
+    </style>
 </head>
 
-<body bgcolor="#856F6A">
+<body>
 
+<nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="about.html">ประวัติ</a>
+    <a href="projects.html">ผลงาน</a>
+    <a href="activities.html">กิจกรรม</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
 
+<section class="hero">
 
-<h1>หน้าหลัก</h1>
-<a href="personal.html">ประวัติส่วนตัว</a>
+    <img src="images/profile.jpg" alt="Profile">
+
+    <h1>ชื่อ นางสาว กานต์ศุภา - นามสกุล พิทักษ์ศิลาธร </h1>
+
+    <h3>นักเรียนระดับชั้นมัธยมศึกษาปีที่ 6/4</h3>
+
+    <p>
+        ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของฉัน
+        เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ผลงาน
+        กิจกรรม และความสามารถต่าง ๆ เพื่อใช้ประกอบการศึกษาต่อ
+        และแสดงศักยภาพของตนเอง
+    </p>
+
+    <a href="about.html" class="btn">
+        เริ่มต้นชม Portfolio
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Portfolio Website | Your Name
+</footer>
 
 </body>
-
 </html>
-
-
-portfolio/
-│
-├── index.html          # หน้าหลัก
-├── about.html          # ประวัติส่วนตัว
-├── projects.html       # ผลงาน
-├── activities.html     # กิจกรรมและเกียรติบัตร
-├── contact.html        # ติดต่อ
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── images/
-│   ├── profile.jpg
-│   ├── projects/
-│   └── certificates/
-│
-└── assets/
-    └── Portfolio.pdf
-    
