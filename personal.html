@@ -1,18 +1,354 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>ประวัติส่วนตัว</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#F8F5F0;
+color:#4E3B31;
+}
+
+nav{
+
+width:100%;
+height:80px;
+background:white;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 8%;
+
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:#8B6B4A;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#4E3B31;
+font-weight:500;
+
+}
+
+nav a:hover{
+
+color:#A67C52;
+
+}
+
+.container{
+
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+
+}
+
+.title{
+
+text-align:center;
+margin-bottom:50px;
+
+}
+
+.title h1{
+
+font-size:42px;
+color:#8B6B4A;
+
+}
+
+.title p{
+
+color:#777;
+
+}
+
+.profile{
+
+display:grid;
+grid-template-columns:350px 1fr;
+gap:40px;
+
+align-items:center;
+
+}
+
+.profile img{
+
+width:300px;
+height:300px;
+
+border-radius:50%;
+object-fit:cover;
+
+border:8px solid white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+margin-bottom:20px;
+color:#8B6B4A;
+
+}
+
+.info{
+
+display:grid;
+grid-template-columns:150px 1fr;
+row-gap:15px;
+
+}
+
+.section{
+
+margin-top:40px;
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.section h2{
+
+margin-bottom:20px;
+color:#8B6B4A;
+
+}
+
+.skill{
+
+margin:20px 0;
+
+}
+
+.bar{
+
+height:12px;
+background:#ddd;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.fill{
+
+height:100%;
+background:#A67C52;
+
+}
+
+footer{
+
+margin-top:50px;
+text-align:center;
+
+padding:20px;
+
+color:#777;
+
+}
+
+@media(max-width:768px){
+
+.profile{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.profile img{
+
+margin:auto;
+
+}
+
+.info{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-<h1>ประวัติส่วนตัว</h1>
-    <img src="images/pt copyyyyyy.jpg">
+
+<nav>
+
+<div class="logo">Portfolio</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="personal.html">Personal</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="activities.html">Activities</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<div class="title">
+
+<h1>Personal Profile</h1>
+
+<p>Get to know me better.</p>
+
+</div>
+
+<div class="profile">
+
+<img src="images/profile.jpg" alt="profile">
+
+<div class="card">
+
+<h2>ข้อมูลส่วนตัว</h2>
+
+<div class="info">
+
+<strong>ชื่อ</strong><span>นางสาวกานต์ศุภา พิทักษ์ศิลาธร</span>
+
+<strong>ชื่อเล่น</strong><span>กาน</span>
+
+<strong>วันเกิด</strong><span>10 ตุลาคม พ.ศ.2551</span>
+
+<strong>อายุ</strong><span>17 ปี</span>
+
+<strong>โรงเรียน</strong><span>โรงเรียนพานทอง</span>
+
+<strong>แผนการเรียน</strong><span>สายศิลป์-ภาษา</span>
+
+<strong>อีเมล</strong><span>kansupa@gmail.com</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>About Me</h2>
+
 <p>
-  ชื่อ นางสาวกานต์ศุภา พิทักษ์ศิลาธร<br>
-  ชื่อเล่น กาน<br>
-  วันเกิด 5 ตุลาคม พ.ศ.2551<br>
-  ที่อยู่ จังหวัดชลบุรี อำเภอพานทอง <br>
-  งานอดิเรก เล่นเกม ดูหนัง<br>
+
+สวัสดีครับ ผมเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6
+มีความสนใจด้านการพัฒนาเว็บไซต์ การออกแบบ และเทคโนโลยี
+ชื่นชอบการเรียนรู้สิ่งใหม่ ๆ พร้อมพัฒนาทักษะของตนเองอยู่เสมอ
+
 </p>
-<p>โรงเรียนพานทอง</p>
+
+</div>
+
+<div class="section">
+
+<h2>Hobbies</h2>
+
+<p>📺 ดูหนัง</p>
+<p>📚 อ่านหนังสือ</p>
+<p>🎵 ฟังเพลง</p>
+<p>💻 เล่นเกม</p>
+
+</div>
+
+<div class="section">
+
+<h2>Skills</h2>
+
+<p>HTML</p>
+
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+
+<p>CSS</p>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+<p>JavaScript</p>
+
+<div class="bar">
+<div class="fill" style="width:75%"></div>
+</div>
+
+<p>Canva</p>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+<footer>
+
+© 2026 My Portfolio
+
+</footer>
+
+</div>
+
 </body>
 </html>
