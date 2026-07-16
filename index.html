@@ -1,178 +1,291 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
+    <title>My Portfolio</title>
 
-body{
-    background:linear-gradient(135deg,#ffd6ec,#f4d3ff,#d8c8ff);
-    overflow-x:hidden;
-    color:#4a235a;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* ผีเสื้อลอย */
-.butterfly{
-    position:fixed;
-    font-size:30px;
-    animation:fly 12s linear infinite;
-    opacity:.8;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+            scroll-behavior:smooth;
+        }
 
-.b1{
-    top:15%;
-    left:-10%;
-    animation-delay:0s;
-}
+        body{
+            background:#F8F5F0;
+            color:#4E3B31;
+        }
 
-.b2{
-    top:45%;
-    left:-20%;
-    animation-delay:4s;
-}
+        /* ===== Navbar ===== */
 
-.b3{
-    top:70%;
-    left:-15%;
-    animation-delay:8s;
-}
+        nav{
+            width:100%;
+            height:80px;
+            background:rgba(255,255,255,.85);
+            backdrop-filter:blur(10px);
 
-@keyframes fly{
-    from{
-        transform:translateX(0) translateY(0) rotate(0deg);
-    }
-    to{
-        transform:translateX(130vw) translateY(-80px) rotate(25deg);
-    }
-}
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
 
-/* เมนู */
-nav{
-    width:100%;
-    padding:18px;
-    background:rgba(255,255,255,.35);
-    backdrop-filter:blur(10px);
-    display:flex;
-    justify-content:center;
-    gap:35px;
-}
+            padding:0 8%;
+            position:fixed;
+            top:0;
+            z-index:999;
+            box-shadow:0 2px 15px rgba(0,0,0,.05);
+        }
 
-nav a{
-    color:#7b2cbf;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
+        .logo{
+            font-size:28px;
+            font-weight:700;
+            color:#8B6B4A;
+        }
 
-nav a:hover{
-    color:#ff4fa3;
-}
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:35px;
+        }
 
-/* เนื้อหา */
-.hero{
-    min-height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:30px;
-}
+        nav ul li a{
+            text-decoration:none;
+            color:#4E3B31;
+            font-weight:500;
+            transition:.3s;
+            position:relative;
+        }
 
-.profile{
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    border:6px solid white;
-    box-shadow:0 0 30px #ff9ed2;
-    object-fit:cover;
-}
+        nav ul li a:hover{
+            color:#A67C52;
+        }
 
-h1{
-    margin-top:25px;
-    font-size:48px;
-    color:#b5179e;
-}
+        nav ul li a::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:-5px;
+            width:0%;
+            height:2px;
+            background:#A67C52;
+            transition:.3s;
+        }
 
-h3{
-    margin-top:10px;
-    color:#7b2cbf;
-}
+        nav ul li a:hover::after{
+            width:100%;
+        }
 
-p{
-    max-width:700px;
-    margin-top:20px;
-    line-height:1.8;
-    font-size:18px;
-}
+        /* ===== Hero ===== */
 
-button{
-    margin-top:35px;
-    padding:15px 40px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(90deg,#ff66c4,#b5179e);
-    color:white;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
-}
+        .hero{
 
-button:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 20px #ff66c4;
-}
+            min-height:100vh;
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:rgba(255,255,255,.35);
-}
-</style>
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:120px 8%;
+        }
+
+        .left{
+            width:50%;
+        }
+
+        .left h3{
+            font-size:22px;
+            color:#A67C52;
+            margin-bottom:10px;
+        }
+
+        .left h1{
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+        .left h2{
+            color:#8B6B4A;
+            margin-bottom:20px;
+        }
+
+        .left p{
+            line-height:1.8;
+            margin-bottom:35px;
+            color:#555;
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            background:#8B6B4A;
+            color:white;
+
+            text-decoration:none;
+
+            padding:15px 35px;
+            border-radius:40px;
+
+            transition:.3s;
+
+            box-shadow:0 10px 25px rgba(139,107,74,.25);
+
+        }
+
+        .btn:hover{
+
+            background:#A67C52;
+            transform:translateY(-4px);
+
+        }
+
+        /* ===== Image ===== */
+
+        .right{
+
+            width:45%;
+            display:flex;
+            justify-content:center;
+
+        }
+
+        .circle{
+
+            width:420px;
+            height:420px;
+
+            background:#E9DFC8;
+
+            border-radius:50%;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            box-shadow:0 15px 35px rgba(0,0,0,.1);
+
+        }
+
+        .circle img{
+
+            width:360px;
+            height:360px;
+
+            border-radius:50%;
+            object-fit:cover;
+
+            border:8px solid white;
+
+        }
+
+        /* ===== Responsive ===== */
+
+        @media(max-width:900px){
+
+            .hero{
+
+                flex-direction:column-reverse;
+                text-align:center;
+
+            }
+
+            .left,.right{
+                width:100%;
+            }
+
+            .circle{
+                width:300px;
+                height:300px;
+                margin-bottom:40px;
+            }
+
+            .circle img{
+                width:250px;
+                height:250px;
+            }
+
+            .left h1{
+                font-size:42px;
+            }
+
+            nav{
+                flex-direction:column;
+                height:auto;
+                padding:20px;
+            }
+
+            nav ul{
+                margin-top:15px;
+                gap:20px;
+                flex-wrap:wrap;
+            }
+
+        }
+
+    </style>
 
 </head>
 <body>
 
-<div class="butterfly b1">🦋</div>
-<div class="butterfly b2">🦋</div>
-<div class="butterfly b3">🦋</div>
-
 <nav>
-    <a href="#">หน้าหลัก</a>
-    <a href="#">personal.html</a>
-    <a href="#">ผลงาน</a>
-    <a href="#">กิจกรรม</a>
-    <a href="#">ติดต่อ</a>
+
+    <div class="logo">Portfolio</div>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="personal.html">Personal</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
 </nav>
 
 <section class="hero">
 
-<img src="images/profile.jpg" class="profile" alt="รูปโปรไฟล์">
+    <div class="left">
 
-<h1>Portfolio</h1>
+        <h3>Hello, I'm 👋</h3>
 
-<h3> นางสาว กานต์ศุภา - พิทักษ์ศิลาธร </h3>
+        <h1>นางสาว กานต์ศุภา - พิทักษ์ศิลาธร</h1>
 
-<p>
-ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน 🌸
-เว็บไซต์นี้รวบรวมประวัติส่วนตัว ผลงาน กิจกรรม
-และความสามารถต่าง ๆ เพื่อใช้ประกอบการศึกษาต่อ
-และแนะนำตัวเอง
-</p>
+        <h2>Student | M.6/4</h2>
 
-<button>เข้าสู่ Portfolio ✨</button>
+        <p>
+
+            ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน
+            เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+            ประวัติการศึกษา กิจกรรม และผลงานต่าง ๆ
+            เพื่อใช้ประกอบการศึกษาต่อและแสดงความสามารถของตนเอง
+
+        </p>
+
+        <a href="personal.html" class="btn">
+            Explore Portfolio
+        </a>
+
+    </div>
+
+    <div class="right">
+
+        <div class="circle">
+
+            <!-- เปลี่ยนเป็นรูปของตัวเอง -->
+            <img src="images/profile.jpg" alt="Profile">
+
+        </div>
+
+    </div>
 
 </section>
 
-<footer>
-🦋 Thank you for visiting my Portfolio 🦋
-</footer>
+</body>
+</html>
